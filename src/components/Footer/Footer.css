@@ -1,0 +1,55 @@
+.footer {
+    background-color: #000;
+    color: #fff;
+    padding: 16px;
+  }
+  @media (min-width: 768px) {
+    .footer {
+      padding: 48px 32px;
+    }
+  }
+  
+  .contact {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 16px;
+  }
+  @media (min-width: 768px) {
+    .contact {
+      flex-direction: row;
+      justify-content: space-between;
+      align-items: stretch;
+    }
+  }
+  
+  .contact_address, .contact_links {
+    flex: 1;
+    min-width: 300px;
+    padding: 24px;
+    background-color: #333;
+    border-radius: 10px;
+  }
+
+  .contact_links {
+    display: flex;
+    align-items: center;
+    justify-content:flex-start;
+    gap: 16px;
+  }
+  
+  .contact_links img {
+    width: 32px;
+  }
+  /* .links {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 20px;
+  }
+  
+  .policy-links, .credits {
+    padding: 10px;
+    background-color: #333;
+    border-radius: 10px;
+    margin: 0 10px;
+  } */

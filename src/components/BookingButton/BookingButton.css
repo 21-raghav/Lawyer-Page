@@ -1,0 +1,30 @@
+.booking_banner {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 32px;
+    margin: 1px 0;
+    background-color: hsl(0, 0%, 20%);
+    color: #ffffff;
+  }
+  
+  .booking_banner h1 {
+    font-size: 32px;
+    margin-bottom: 20px;
+  }
+  
+  .booking_banner_button {
+    padding: 10px 20px;
+    font-size: 16px;
+    color: hsl(0, 0%, 0%);
+    background-color: hsl(0, 0%, 100%);
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  
+  .booking_banner_button:hover {
+    background-color: hsl(0, 0%, 85%);
+  }
+  

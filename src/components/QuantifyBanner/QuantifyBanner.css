@@ -1,0 +1,39 @@
+.consultation-banner {
+    background-color: #333;
+    color: #fff;
+    padding: 32px;
+    margin: 1px 0;
+    text-align: center;
+  }
+  
+  .book-button {
+    padding: 10px 20px;
+    margin: 20px 0;
+    background-color: #fff;
+    color: #333;
+    border: none;
+    cursor: pointer;
+  }
+.stats {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 16px;
+}  
+@media (min-width: 768px) {
+  .stats {
+    display: flex;
+    justify-content: space-between;
+  }}
+  
+  .stats div {
+    text-align: center;
+  }
+  
+  .stats h2 {
+    margin: 0;
+  }
+  
+  .stats p {
+    margin: 5px 0 0;
+  }
+  
