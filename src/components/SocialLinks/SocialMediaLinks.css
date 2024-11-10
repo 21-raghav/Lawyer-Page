@@ -1,0 +1,9 @@
+.social_list {
+  display: flex;
+  justify-content: center;
+  gap: 16px;
+}
+.social_list img {
+  display: inline-block;
+  width: 32px;
+}

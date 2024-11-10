@@ -9,14 +9,14 @@
     }
   }
   
-  .contact {
+  .footer_contact {
     display: flex;
     flex-direction: column;
     align-items: center;
     gap: 16px;
   }
   @media (min-width: 768px) {
-    .contact {
+    .footer_contact {
       flex-direction: row;
       justify-content: space-between;
       align-items: stretch;
@@ -26,6 +26,7 @@
   .contact_address, .contact_links {
     flex: 1;
     min-width: 300px;
+    max-width: 500px;
     padding: 24px;
     background-color: #333;
     border-radius: 10px;

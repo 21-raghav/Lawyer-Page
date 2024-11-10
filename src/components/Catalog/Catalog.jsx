@@ -1,45 +1,67 @@
 // import React from 'react';
-import './Catalog.css'; // Import the CSS file
+import "./Catalog.css";
+const services = [
+  {
+    title: "Divorce Petition",
+    description:
+      "Drafting a divorce petition is the initial step, and these petitions are essential for facilitating settlements and agreements.",
+  },
+  {
+    title: "Divorce Resolution",
+    description:
+      "Fair Divorce Settlement is necessary for the satisfaction or dignity of both parties.",
+  },
+  {
+    title: "Conflict Resolution & Guidance",
+    description:
+      "We explore various ideologies and thoroughly understand the foundations to effectively practice counseling and mediation.",
+  },
+  {
+    title: "Legal Separation",
+    description:
+      "Legal separation, established by law, allows couples to reflect and consider their options before making a decision on permanent separation.",
+  },
+  {
+    title: "Domestic Violence(IPV)",
+    description:
+      "Assist victims in overcoming their suffering, ensuring that perpetrators are held accountable and justice is served.",
+  },
+  {
+    title: "Mutual Consent Divorce",
+    description:
+      "Concerned to mutual agreement and cooperation between both parties to dissolve the marriage.",
+  },
+  {
+    title: "Maintenance(Spousal Support)",
+    description:
+      "The demand for maintenance is typically made by partners who lack the assets and resources to support themselves.",
+  },
+  {
+    title: "Child Custody",
+    description:
+      "Ensures that arrangements are made with the best interests of the child in mind.",
+  },
+];
 
 const Catalog = () => {
-  const services = [
-    {
-      title: 'REDEVELOPMENT',
-      icon: '🏗️', // Replace with actual icon
-      description: 'Drafting of Development Agreements, POA, Consent Affidavits,',
-      buttonText: 'READ MORE'
-    },
-    {
-      title: 'CONVEYANCE',
-      icon: '🏢', // Replace with actual icon
-      description: 'Drafting of Conveyance Deed, Sale Deed, Transfer Deed, Release Deed, Gist Deed,',
-      buttonText: 'READ MORE'
-    },
-    {
-      title: 'PROPERTY LITIGATIONS',
-      icon: '🏠', // Replace with actual icon
-      description: 'Litigations of whatsoever nature before any court across India with reference to',
-      buttonText: 'READ MORE'
-    },
-    {
-      title: 'DIVORCE LITIGATION',
-      icon: '👫', // Replace with actual icon
-      description: 'Advises and Litigation relating to Divorce wedlock including counseling, Divorce,',
-      buttonText: 'READ MORE'
-    }
-  ];
-
   return (
-    <div className="legal-services">
-      {services.map((service, index) => (
-        <div key={index} className="service-card">
-          <div className="service-icon">{service.icon}</div>
-          <h3>{service.title}</h3>
-          <p>{service.description}</p>
-          <button>{service.buttonText}</button>
+    <section className="services_section">
+      <div className="services">
+        <h2 className="services_heading">Our Expertise</h2>
+        <div className="services_list">
+          {services.map((service, index) => (
+            <div
+              key={index}
+              className="service_card"
+            >
+              <div style={{ fontSize: "40px" }}>{service.icon}</div>
+              <h3>{service.title}</h3>
+              <p>{service.description}</p>
+            </div>
+          ))}
         </div>
-      ))}
-    </div>
+      </div>
+    </section>
   );
 };
 

@@ -1,11 +1,16 @@
+.hero_section {
+  background-color: hsl(0, 0%, 20%);
+}
 .hero {
+  max-width: 1200px;
+  margin: 0 auto;
     color: #fff;
     text-align: center;
   }
-@media (min-width: 768px) {
+@media (min-width: 991px) {
   .hero {
     display: flex;
-    margin: 1px 0;
+    text-align: start;
   }
 }
   .hero_image {
@@ -17,19 +22,25 @@
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    background-color: hsl(0, 0%, 20%); 
-    padding: 60px 24px;
+    gap: 24px;
+    /* background-color: hsl(0, 0%, 20%);  */
+    padding: 24px;
   }
-  
+  @media (min-width: 991px) {.hero_text {
+    align-items: flex-start;
+  }}
+  .hero_text h1 {
+    font-size: 28px;
+  }
   .hero-button {
     background-color: hsl(0, 0%, 85%);
     color: hsl(0, 0%, 0%);
     border: none;
     padding: 10px 20px;
+    margin-top: 16px;
     font-size: 16px;
     border-radius: 5px;
     cursor: pointer;
-    margin-top: 20px;
   }
   
   .hero-button:hover {

@@ -1,0 +1,7 @@
+:root {
+    --width-tablet: 600px;
+    --width-desktop: 1200px;
+    --color-navy: hsl(225, 37%, 20%);
+    --color-light-grey: hsl(180, 3%, 94%);
+    --color-orange: hsl(7, 78%, 56%);
+}

@@ -1,35 +1,36 @@
-.legal-services {
+.services_section {
+  padding: 32px;
+}
+.services {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+.services_heading {
+  margin-bottom: 32px;
+  font-size: 32px;
+}
+.services_list {
     display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
-    gap: 24px;
-    padding: 20px;
-    margin: 1px 0;
-    background-color: hsl(0, 0%, 20%);
+    grid-template-columns: repeat(auto-fill, minmax(230px, 1fr));
+    gap: 20px;
   }
   
-  .service-card {
+  .service_card {
     border: 1px solid #ccc;
     padding: 20px;
     text-align: center;
-    background-color: #fff;
     border-radius: 8px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
   }
   
-  .service-icon {
-    font-size: 40px;
-    margin-bottom: 10px;
+  .service_card h3 {
+    margin-bottom: 16px;
   }
   
-  .service-card h3 {
-    margin-bottom: 10px;
-  }
-  
-  .service-card p {
+  /* .service_card p {
     margin-bottom: 20px;
-  }
+  } */
   
-  .service-card button {
+  /* .service-card button {
     padding: 10px 20px;
     background-color: hsl(0, 0%, 90%);
     color: hsl(0, 0%, 0%);
@@ -41,4 +42,4 @@
   .service-card button:hover {
     background-color: hsl(0, 0%, 85%);
   }
-  
+   */

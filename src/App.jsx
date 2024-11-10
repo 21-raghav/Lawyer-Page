@@ -1,25 +1,42 @@
-import Navbar from './components/Navbar/Navbar';
-import Hero from './components/Hero/Hero';
-import Introduction from './components/Introduction/Introduction';
-import Catalog from './components/Catalog/Catalog';
-import QuantifyBanner from './components/QuantifyBanner/QuantifyBanner';
-import BookingButton from './components/BookingButton/BookingButton';
-import Footer from './components/Footer/Footer';
+import {
+  createBrowserRouter,
+  RouterProvider,
+  // Route,
+  // Link,
+} from "react-router-dom";
+
+import Root from "./pages/Root/Root";
+import HomePage from "./pages/Home/HomePage";
+import AboutPage from "./pages/About/AboutPage";
+import ContactPage from "./pages/Contact/ContactPage";
 
 import './App.css'
+
+const router = createBrowserRouter([
+  {
+    path: "/",
+    element: <Root />,
+    children: [
+      {
+        index: true,
+        element: <HomePage />,
+      },
+      {
+        path: "about",
+        element: <AboutPage />,
+      },
+      {
+        path: "contact",
+        element: <ContactPage/>,
+      },
+    ],
+  },
+]);
 
 function App() {
 
   return (
-    <>
-      <Navbar />
-      <Hero />
-      <Introduction />
-      <Catalog />
-      <QuantifyBanner />
-      <BookingButton />
-      <Footer />
-    </>
+    <RouterProvider router={router}/>
   )
 }
 

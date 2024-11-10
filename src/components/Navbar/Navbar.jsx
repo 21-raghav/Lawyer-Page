@@ -1,3 +1,4 @@
+import { Link } from 'react-router-dom';
 import {useState} from 'react';
 import './Navbar.css'; 
 
@@ -9,17 +10,18 @@ const Navbar = () => {
   };
 
   return (
-    <nav className="navbar">
+    <nav className="navbar_wrapper">
+      <div className="navbar">
       <div className="navbar__logo">
-        <a href="/">Yash Rawat</a>
+        <Link to="/">Yash Rawat</Link>
       </div>
       <ul className={!isMenuOpen ? "navbar__menu" : "navbar__menu navbar__menu--state-active"}>
-        <li><a href="/">Home</a></li>
-        <li><a href="/about">About</a></li>
-        <li><a href="/services">Services</a></li>
-        <li><a href="/contact">Contact</a></li>
+        <li><Link to="/">Home</Link></li>
+        <li><Link to="about">About</Link></li>
+        <li><Link to="contact">Contact</Link></li>
       </ul>
-      <a className="navbar__menu__icon" onClick={handleMenuIconClick}><img src="./ham_menu_icon.svg" alt="menu"/></a>
+      <button className="navbar__menu__icon" onClick={handleMenuIconClick} type="button" ><img src="./ham_menu_icon.svg" alt="menu"/></button>
+      </div>
     </nav>
   );
 };

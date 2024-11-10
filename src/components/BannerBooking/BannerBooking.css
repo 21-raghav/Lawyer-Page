@@ -1,0 +1,41 @@
+.booking_banner_wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 32px;
+    max-width: var(--width-tablet);
+    min-height: 300px;
+    padding: 16px;
+    margin: 0 auto;
+    background-color: var(--color-light-grey);
+  }
+  @media (min-width: 991px) {
+    .booking_banner_wrapper {
+      align-items: flex-start;
+      max-width: var(--width-desktop);
+    }
+  }
+  .booking_banner_wrapper h2 {
+    font-size: 32px;
+  }
+  .booking_banner_wrapper p {
+    max-width: 700px;
+    font-size: 18px;
+  }
+  
+  .booking_banner_button {
+    padding: 10px 20px;
+    font-size: 16px;
+    color: hsl(0, 0%, 100%);
+    text-decoration: none;
+    background-color: hsl(0, 0%, 20%);
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  
+  .booking_banner_button:hover {
+    background-color: hsl(0, 0%, 85%);
+  }
+  
