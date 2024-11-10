@@ -11,7 +11,7 @@ const BannerBooking = () => {
           Discover a lawyer who offers top-notch legal advice and consultation,
           all conveniently available under one roof near you.
         </p>
-        <Link to={"contact"} className="booking_banner_button">Connect with us</ Link>
+        <Link to={"/contact"} className="booking_banner_button">Connect with us</ Link>
       </div>
   );
 };
