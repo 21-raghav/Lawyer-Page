@@ -9,6 +9,7 @@ import Root from "./pages/Root/Root";
 import HomePage from "./pages/Home/HomePage";
 import AboutPage from "./pages/About/AboutPage";
 import ContactPage from "./pages/Contact/ContactPage";
+import Services from "./pages/Services/Services";
 
 import './App.css'
 
@@ -28,6 +29,10 @@ const router = createBrowserRouter([
       {
         path: "contact",
         element: <ContactPage/>,
+      },
+      {
+        path: "services/:serviceName",
+        element: <Services />,
       },
     ],
   },

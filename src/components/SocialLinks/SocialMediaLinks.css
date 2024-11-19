@@ -3,7 +3,33 @@
   justify-content: center;
   gap: 16px;
 }
+.social_list_link_btn {
+  display: flex;
+  gap: 10px;
+  align-items: center;
+}
 .social_list img {
   display: inline-block;
   width: 32px;
 }
+.running-text-container {
+  width: 80px;
+  overflow: hidden;
+  white-space: nowrap;
+}
+.running-text {
+  display: inline-block;
+  width: max-content;
+  padding-left: 100%;
+  color: white;
+  animation: runText 5s linear infinite ;
+}
+@keyframes runText {
+  0% {
+    transform: translateX(100%);
+  }
+  100% {
+    transform: translateX(-100%);
+  }
+}
+

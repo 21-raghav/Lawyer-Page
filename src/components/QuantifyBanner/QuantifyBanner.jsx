@@ -3,10 +3,9 @@ import "./QuantifyBanner.css"; // Import the CSS file
 
 const QuantifyBanner = () => {
   return (
-    <section className="stats_section">
-      <div className="stats">
-        <h2 className="stats_heading">You always receive expert guidance</h2>
-        <div className="stats_numbers">
+      <div className="banner__quantify">
+        <h2 className="banner__quantify__heading">You can always count on our expert guidance</h2>
+        <div className="banner__quantify__numbers">
           <div>
             <h2>1400+</h2>
             <p>Clients Consulted</p>
@@ -20,12 +19,7 @@ const QuantifyBanner = () => {
             <p>Successful cases</p>
           </div>
         </div>
-        {/* <div>
-          <h2>700+</h2>
-          <p>Projects completed</p>
-        </div> */}
       </div>
-    </section>
   );
 };
 

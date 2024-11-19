@@ -1,41 +1,127 @@
-.booking_banner_wrapper {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
+.Banner_Booking {
+  display: flex;
+  flex-direction: column;
+  gap: 60px;
+  max-width: var(--width-tablet);
+  padding: 40px 16px;
+  margin: 0 auto;
+}
+@media (min-width: 991px) {
+  .Banner_Booking {
+    flex-direction: row;
+    justify-content: space-between;
+    gap: 48px;
+    max-width: var(--width-desktop);
+    padding: 112px 32px;
+  }
+}
+
+.Banner_Booking h2 {
+  font-size: var(--h2-size-mob);
+}
+@media (min-width: 768px) {
+  .Banner_Booking h2 {
+    font-size: var(--h2-size-tab);
+  }
+}
+
+.Banner_Booking p,
+.Banner_Booking span,
+.Banner_Booking a {
+  font-size: var(--p-size-mob);
+}
+@media (min-width: 991px) {
+  .Banner_Booking p,
+  .Banner_Booking span,
+  .Banner_Booking a {
+    font-size: var(--p-size-desk);
+  }
+}
+
+.Banner_Booking_Content_Wrapper,
+.Banner_Booking_Timetable_Wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 16px;
+}
+@media (min-width: 991px) {
+  .Banner_Booking_Content_Wrapper,
+  .Banner_Booking_Timetable_Wrapper {
     gap: 32px;
-    max-width: var(--width-tablet);
-    min-height: 300px;
-    padding: 16px;
-    margin: 0 auto;
-    background-color: var(--color-light-grey);
   }
-  @media (min-width: 991px) {
-    .booking_banner_wrapper {
-      align-items: flex-start;
-      max-width: var(--width-desktop);
-    }
+}
+
+.Banner_Booking_Content_Wrapper {
+  flex: 2;
+}
+@media (min-width: 991px) {
+  .Banner_Booking_Content_Wrapper {
+    align-items: flex-start;
   }
-  .booking_banner_wrapper h2 {
-    font-size: 32px;
+}
+
+.Banner_Booking_Content_Wrapper p {
+  text-align: center;
+}
+@media (min-width: 991px) {
+  .Banner_Booking_Content_Wrapper p {
+    text-align: left;
   }
-  .booking_banner_wrapper p {
-    max-width: 700px;
-    font-size: 18px;
+}
+
+.Banner_Booking_Timetable_Wrapper {
+  flex: 1;
+}
+/* @media (min-width: 991px) {
+  .Banner_Booking_Timetable_Wrapper {
+    gap: 32px;
   }
-  
-  .booking_banner_button {
-    padding: 10px 20px;
-    font-size: 16px;
-    color: hsl(0, 0%, 100%);
-    text-decoration: none;
-    background-color: hsl(0, 0%, 20%);
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
+} */
+
+.Banner_Booking_Button {
+  padding: 15px 30px;
+  margin-top: 16px;
+  color: hsl(0, 0%, 100%);
+  text-decoration: none;
+  letter-spacing: 0.2ch;
+  background-color: var(--color-grey);
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+.Banner_Booking_Button:hover {
+  color: black;
+  background-color: transparent;
+  outline: 1.5px solid black;
+}
+@media (min-width: 991px) {
+  .Banner_Booking_Button {
+    margin-top: 0;
   }
-  
-  .booking_banner_button:hover {
-    background-color: hsl(0, 0%, 85%);
-  }
-  
+}
+
+.Banner_Booking_Timetable_Wrapper h2 {
+  text-align: center;
+}
+
+.Banner_Booking_Listitem {
+  display: flex;
+  justify-content: space-between;
+  gap: 32px;
+  min-width: 350px;
+}
+.Banner_Booking_Listitem:not(:last-of-type) {
+  padding-bottom: 16px;
+  margin-bottom: 16px;
+  border-bottom: 1px solid black;
+}
+
+.Banner_Booking_Listitem span {
+  min-width: 150px;
+  text-align: center;
+}
+
+.Banner_Booking_Listitem .Banner_Booking_Listitem_Span--align {
+  text-align: left;
+}

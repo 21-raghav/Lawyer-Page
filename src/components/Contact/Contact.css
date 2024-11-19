@@ -10,7 +10,7 @@
     .contact {
         grid-template-columns: repeat(3, 1fr);
         max-width: 1200px;
-        padding: 60px 16px;
+        padding: 112px 32px;
     }
 }
 .contact_card {

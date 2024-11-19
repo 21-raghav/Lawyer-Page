@@ -1,22 +1,31 @@
-// import ContactBar from '../../components/ContactBar/ContactBar';
-// import Navbar from '../../components/Navbar/Navbar';
-import Hero from '../../components/Hero/Hero';
-// import Introduction from '../../components/Introduction/Introduction';
-import Catalog from '../../components/Catalog/Catalog';
-import QuantifyBanner from '../../components/QuantifyBanner/QuantifyBanner';
-import BannerBooking from '../../components/BannerBooking/BannerBooking';
-// import Footer from '../../components/Footer/Footer';
+import HeroNew from "../../components/HeroNew/HeroNew";
+import BannerBooking from "../../components/BannerBooking/BannerBooking";
+import Profile from "../../components/Profile/Profile";
+import Catalog from "../../components/Catalog/Catalog";
+import QuantifyBanner from "../../components/QuantifyBanner/QuantifyBanner";
+
+import "./HomePage.css";
 
 const HomePage = () => {
-
-    return (
-      <>
+  return (
+    <>
+      <section>
+        <HeroNew />
+      </section>
+      <section className="section--bg-color-light-grey">
         <BannerBooking />
-        <Hero />
+      </section>
+      <section>
+        <Profile />
+      </section>
+      <section className="section--bg-color-light-grey">
         <Catalog />
+      </section>
+      <section>
         <QuantifyBanner />
-      </>
-    )
-  }
-  
-  export default HomePage;
+      </section>
+    </>
+  );
+};
+
+export default HomePage;

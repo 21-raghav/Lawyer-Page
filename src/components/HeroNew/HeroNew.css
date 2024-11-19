@@ -1,0 +1,25 @@
+.Hero {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 80vh;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-blend-mode: soft-light;
+    background-color: hsla(0, 0%, 0%, 0.7);
+    transition: background-image 1s;
+}
+.Hero_Heading {
+    font-size: 24px;
+    color: var(--color-light-grey); 
+    opacity: 0; 
+    transition: opacity 2s ease;
+}
+@media (min-width: 991px) {
+    .Hero_Heading {
+        font-size: 32px; 
+    }
+}
+.Heading--fade { opacity: 1; }
+

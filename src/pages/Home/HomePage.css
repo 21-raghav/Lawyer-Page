@@ -1,0 +1,6 @@
+.section--bg-color-light-grey {
+    background-color: var(--color-light-grey);
+}
+.section--bg-color-grey {
+    background-color: var(--color-grey);
+}
