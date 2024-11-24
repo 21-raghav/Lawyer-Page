@@ -1,12 +1,17 @@
 :root {
-    --width-tablet: 550px;
+    --width-mobile: 550px;
+    --width-tablet: 850px;
     --width-desktop: 1200px;
+    --box-padding-mobile: 36px 16px;
+    --box-padding-desktop: 80px 32px;
     --h2-size-mob: 24px;
-    --h2-size-tab: 32px;
+    --h2-size-tab: 30px;
     --p-size-mob: 16px;
+    --p-size-tab: 18px;
     --p-size-desk: 20px;
     --color-navy: hsl(225, 37%, 20%);
     --color-grey:hsl(0, 0%, 20%);
     --color-light-grey: hsl(180, 3%, 94%);
     --color-orange: hsl(7, 78%, 56%);
+    --color-green: hsl(80, 61%, 50%);
 }

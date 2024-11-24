@@ -1,5 +1,7 @@
 import BannerBooking from "../BannerBooking/BannerBooking";
 
+import lawyerImg from "../../images/self.jpg";
+
 import "./About.css";
 
 const About = () => {
@@ -9,10 +11,10 @@ const About = () => {
         <div className="about_text_wrapper">
           <h2 className="about__heading">About Us</h2>
           <p className="about__para">
-            We are a comprehensive legal firm based in New Delhi, specializing
-            in a wide range of legal services. Our expertise covers all matters
-            related to divorce, child custody, alimony, maintenance, and other
-            related issues.
+            We are a legal firm based in New Delhi, specializing in a wide range
+            of legal services. Our expertise covers all matters related to
+            divorce, child custody, alimony, maintenance, and other related
+            issues.
           </p>
           <p className="about__para">
             Our strengths lies in the depths of our knowledge, strong client
@@ -56,7 +58,11 @@ const About = () => {
           </p>
         </div>
         <div className="about_img_wrapper">
-          <img src="./images/self.jpg" />
+          <img
+            src={lawyerImg}
+            alt="A lawyer dressed in formal attire, standing in a well-lit chamber."
+            loading="lazy"
+          />
         </div>
       </div>
       <BannerBooking />

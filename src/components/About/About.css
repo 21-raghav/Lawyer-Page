@@ -2,17 +2,21 @@
     display: flex;
     flex-direction: column;
     gap: 32px;
-    max-width: var(--width-tablet);
-    padding: 48px 16px;
+    max-width: var(--width-mobile);
+    padding: var(--box-padding-mobile);
     margin: 0 auto;
+}
+@media (min-width: 768px) {
+    .about {
+        max-width: var(--width-tablet);
+    }
 }
 @media (min-width: 991px) {
     .about {
         flex-direction: row;
         align-items: center;
-        gap: 48px;
         max-width: var(--width-desktop);
-        padding: 112px 32px;
+        padding: var(--box-padding-desktop);
     }
 }
 

@@ -1,8 +1,8 @@
 import HeroNew from "../../components/HeroNew/HeroNew";
 import BannerBooking from "../../components/BannerBooking/BannerBooking";
 import Profile from "../../components/Profile/Profile";
-import Catalog from "../../components/Catalog/Catalog";
-import QuantifyBanner from "../../components/QuantifyBanner/QuantifyBanner";
+import Services from "../../components/Services/Services";
+import BannerMilestone from "../../components/BannerMilestone/BannerMilestone";
 
 import "./HomePage.css";
 
@@ -15,15 +15,9 @@ const HomePage = () => {
       <section className="section--bg-color-light-grey">
         <BannerBooking />
       </section>
-      <section>
-        <Profile />
-      </section>
-      <section className="section--bg-color-light-grey">
-        <Catalog />
-      </section>
-      <section>
-        <QuantifyBanner />
-      </section>
+      <Profile />
+      <Services />
+      <BannerMilestone />
     </>
   );
 };

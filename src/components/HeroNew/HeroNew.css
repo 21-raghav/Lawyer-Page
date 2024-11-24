@@ -10,9 +10,14 @@
     background-color: hsla(0, 0%, 0%, 0.7);
     transition: background-image 1s;
 }
+@media (min-width: 991px) {
+.Hero {
+    background-position: top;
+}}
 .Hero_Heading {
     font-size: 24px;
     color: var(--color-light-grey); 
+    text-align: center;
     opacity: 0; 
     transition: opacity 2s ease;
 }

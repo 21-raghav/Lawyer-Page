@@ -1,8 +1,8 @@
 import { useState, useEffect } from "react";
 
-import heroImg from "../../../public/images_hero/team_n.jpg";
-import heroImg2 from "../../../public/images_hero/clarisse-meyer-unsplash_n.jpg";
-import heroImg3 from "../../../public/images_hero/tingey-injury-law-firm-unsplash_n.jpg";
+import heroImg from "../../images/team_n.jpg";
+import heroImg2 from "../../images/clarisse-meyer-unsplash_n.jpg";
+import heroImg3 from "../../images/tingey-injury-law-firm-unsplash_n.jpg";
 
 import "./HeroNew.css";
 

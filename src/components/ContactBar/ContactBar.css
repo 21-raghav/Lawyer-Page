@@ -3,6 +3,11 @@
   color: hsl(0, 0%, 100%);
   background-color: var(--color-navy);
 }
+/* @media (min-width: 768px) {
+  .contactbar {
+    display: block;
+  }
+} */
 .contactbar img {
   display: inline-block;
   width: 32px;

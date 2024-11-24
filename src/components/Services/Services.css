@@ -1,0 +1,106 @@
+.services {
+  padding: var(--box-padding-mobile);
+  margin: 0 auto;
+}
+@media (min-width: 991px) {
+  .services {
+    max-width: var(--width-desktop);
+    padding: var(--box-padding-desktop);
+  }
+}
+
+.services-heading {
+  margin-bottom: 32px;
+  font-size: var(--h2-size-mob);
+  text-align: center;
+}
+@media (min-width: 768px) {
+  .services-heading {
+    margin-bottom: 40px;
+    font-size: var(--h2-size-tab);
+  }
+}
+
+.services-card-list-wrapper {
+  position: relative;
+}
+
+.services-card-list {
+  display: flex;
+  gap: 8px;
+  overflow-x: hidden;
+  scroll-behavior: smooth;
+  scroll-snap-type: mandatory;
+}
+
+.service-card {
+  flex: 0 0 310px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  min-height: 250px;
+  background-color: var(--color-light-grey);
+  padding: 16px;
+  font-size: var(--p-size-mob);
+  text-align: center;
+  border-radius: 5px;
+}
+@media (min-width: 768px) {
+  .service-card {
+    flex-basis: 390px;
+  }
+}
+@media (min-width: 991px) {
+  .service-card {
+    min-height: 300px;
+    font-size: var(--p-size-desk);
+  }
+}
+
+.service-card-heading {
+  margin-bottom: 20px;
+}
+.service-card-heading::after {
+  content: "";
+  position: relative;
+  left: 50%;
+  display: block;
+  width: 50px;
+  height: 2px;
+  margin-top: 8px;
+  background-color: var(--color-green);
+  transform: translateX(-50%);
+}
+
+.service-card a {
+  padding: 8px 20px;
+  margin-top: auto;
+  color: var(--color-light-grey);
+  background-color: var(--color-grey);
+  border-radius: 5px;
+}
+.service-card a:hover,
+.service-card a::selection {
+  color: var(--color-grey);
+  background-color: transparent;
+  border: 1px solid var(--color-grey);
+}
+
+.services-arrow-btn {
+  position: absolute;
+  top: 50%;
+  padding: 8px 12px;
+  color: var(--color-light-grey);
+  background-color: hsla(0, 0%, 20%, 0.8);
+  border: none;
+  border-radius: 5px;
+  transform: translateY(-50%);
+  transition: all 0.5s;
+}
+.services-arrow-btn:hover {
+  background-color: var(--color-green);
+  transform: translateY(-50%) scale(1.2);
+}
+.arrow-btn-right {
+  right: 0;
+}

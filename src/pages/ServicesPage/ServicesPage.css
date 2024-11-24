@@ -34,14 +34,23 @@
 }
 
 .service__para_wrapper {
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
     max-width: var(--width-tablet);
+    padding: var(--box-padding-mobile);
     margin: 0 auto;
-  padding: 48px 16px;
+ 
+}
+@media (min-width: 768px) {
+  .service__para_wrapper {
+    max-width: var(--width-tablet);
+  }
 }
 @media (min-width: 991px) {
   .service__para_wrapper {
     max-width: var(--width-desktop);
-    padding: 112px 32px;
+    padding: var(--box-padding-desktop)
   }
 }
 .service__para {

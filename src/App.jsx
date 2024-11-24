@@ -9,7 +9,7 @@ import Root from "./pages/Root/Root";
 import HomePage from "./pages/Home/HomePage";
 import AboutPage from "./pages/About/AboutPage";
 import ContactPage from "./pages/Contact/ContactPage";
-import Services from "./pages/Services/Services";
+import ServicesPage from "./pages/ServicesPage/ServicesPage";
 
 import './App.css'
 
@@ -32,7 +32,7 @@ const router = createBrowserRouter([
       },
       {
         path: "services/:serviceName",
-        element: <Services />,
+        element: <ServicesPage />,
       },
     ],
   },
@@ -41,7 +41,7 @@ const router = createBrowserRouter([
 function App() {
 
   return (
-    <RouterProvider router={router}/>
+    <RouterProvider router={router} />
   )
 }
 
