@@ -26,9 +26,12 @@
   list-style: none;
   position: absolute;
   top: 100%;
-  right: 0;
-  width: 0;
-  padding: 0;
+  right: -100%;
+  display: none;
+  flex-direction: column;
+  gap: 16px;
+  width: 33.33%;
+  padding: 32px;
   color: black;
   text-align: center;
   background-color: hsl(0, 0%, 20%);
@@ -39,7 +42,10 @@
 @media (min-width: 768px) {
   .navbar__menu {
     position: relative;
+    right: unset;
     display: flex;
+    flex-direction: row;
+    gap: 0;
     width: auto;
     padding: 0;
     column-gap: 16px;
@@ -47,7 +53,8 @@
 }
 
 .navbar__menu--state-active {
-  width: 150px;
+  right: 0;
+  display: flex;
 }
 
 .navbar__menu li a {

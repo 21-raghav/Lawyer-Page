@@ -1,16 +1,34 @@
 import { Link } from "react-router-dom";
-import { useState } from "react";
+import { useState, useEffect, useRef } from "react";
 import "./Navbar.css";
 
 const Navbar = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const menuRef = useRef();
 
   const handleMenuIconClick = () => {
     setIsMenuOpen(!isMenuOpen);
   };
 
+  const closeMenu = () => {
+    setIsMenuOpen(false);
+  };
+
+  const handleClickOutside = (event) => {
+    if (menuRef.current && !menuRef.current.contains(event.target)) {
+      closeMenu();
+    }
+  };
+
+  useEffect(() => {
+    document.addEventListener("mousedown", handleClickOutside);
+    return () => {
+      document.removeEventListener("mousedown", handleClickOutside);
+    };
+  }, []);
+
   return (
-    <nav className="navbar_wrapper">
+    <nav ref={menuRef} className="navbar_wrapper">
       <div className="navbar">
         <div className="navbar__logo">
           <Link to="/">Yash Rawat</Link>
@@ -22,13 +40,13 @@ const Navbar = () => {
               : "navbar__menu navbar__menu--state-active"
           }
         >
-          <li>
+          <li onClick={handleMenuIconClick}>
             <Link to="/">Home</Link>
           </li>
-          <li>
+          <li onClick={handleMenuIconClick}>
             <Link to="about">About</Link>
           </li>
-          <li>
+          <li onClick={handleMenuIconClick}>
             <Link to="contact">Contact</Link>
           </li>
         </ul>

@@ -29,8 +29,6 @@
   display: flex;
   gap: 8px;
   overflow-x: hidden;
-  scroll-behavior: smooth;
-  scroll-snap-type: mandatory;
 }
 
 .service-card {
@@ -79,8 +77,7 @@
   background-color: var(--color-grey);
   border-radius: 5px;
 }
-.service-card a:hover,
-.service-card a::selection {
+.service-card a:hover {
   color: var(--color-grey);
   background-color: transparent;
   border: 1px solid var(--color-grey);

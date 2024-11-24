@@ -2,6 +2,10 @@ import { useEffect, useRef } from "react";
 
 import { Link } from "react-router-dom";
 
+import smoothscroll from 'smoothscroll-polyfill'; 
+
+
+
 import { servicesData } from "../../data/servicesData.js";
 
 import "./Services.css";
@@ -9,9 +13,6 @@ import "./Services.css";
 const Catalog = () => {
   const scrollRef = useRef(null);
   const serviceCardRef = useRef([]);
-
-  const isScrolledToEnd = (elem) =>
-    elem.scrollLeft + elem.clientWidth >= elem.scrollWidth;
 
   const handleLeftArrowClick = () => {
     scrollRef.current.scrollLeft -= serviceCardRef.current[0].offsetWidth + 8;
@@ -21,18 +22,22 @@ const Catalog = () => {
     scrollRef.current.scrollLeft += serviceCardRef.current[0].offsetWidth + 8;
   };
 
+
   useEffect(() => {
-    if (scrollRef.current) {
-      const interval = setInterval(() => {
-        if (isScrolledToEnd(scrollRef.current)) {
-          scrollRef.current.scrollLeft = 0;
-        } else {
-          scrollRef.current.scrollLeft +=
-            serviceCardRef.current[0].offsetWidth + 8;
+    smoothscroll.polyfill();
+    const interval = setInterval(() => {
+      const elem = scrollRef.current;
+      if (elem && serviceCardRef.current[0]) {
+        if (elem && serviceCardRef.current[0]) {
+          elem.scrollLeft =
+            elem.scrollLeft + elem.clientWidth >= elem.scrollWidth
+              ? 0
+              : elem.scrollLeft + serviceCardRef.current[0].offsetWidth + 8;
         }
-      }, 3000);
-      return () => clearInterval(interval);
-    }
+      }
+     
+    }, 3000);
+    return () => clearInterval(interval);
   }, []);
 
   return (
@@ -44,7 +49,6 @@ const Catalog = () => {
         <div className="services-card-list-wrapper">
           <div ref={scrollRef} className="services-card-list">
             {servicesData.map((service, index) => (
-              // ref={serviceCardRef}
               <div
                 key={index}
                 ref={(el) => (serviceCardRef.current[index] = el)}
@@ -52,11 +56,7 @@ const Catalog = () => {
               >
                 <h4 className="service-card-heading">{service.title}</h4>
                 <p>{service.description}</p>
-                <Link
-                  to={{ pathname: `services/${service.title}`, state: {yourState : service} }}
-                >
-                  Read More
-                </Link>
+                <Link to={`services/${service.title}`}>Read More</Link>
               </div>
             ))}
           </div>

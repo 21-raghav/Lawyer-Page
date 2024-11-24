@@ -68,12 +68,12 @@ const Footer = () => {
                 About
               </Link>
             </li>
-            <li>
+            {/* <li>
               <img src="./icons/icon-right-arrow-svg.svg" alt="arrow icon" />
               <Link to={"services"} aria-label="Go to Services Page">
                 Services
               </Link>
-            </li>
+            </li> */}
             <li>
               <img src="./icons/icon-right-arrow-svg.svg" alt="arrow icon" />
               <Link to={"contact"} aria-label="Go to Contact Page">

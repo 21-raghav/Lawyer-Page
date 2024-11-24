@@ -83,6 +83,7 @@
 .profile__img {
   position: relative;
   max-width: 550px;
+  margin: 0 auto;
 }
   
   
