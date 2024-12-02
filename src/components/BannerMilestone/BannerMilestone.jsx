@@ -54,25 +54,25 @@ const BannerMilestone = () => {
       </h2>
       <div className="milestone-showcase-box">
         <div>
-          <h4 className="count" data-target="1000">
+          <h4 className="count" data-target="1500">
             0
           </h4>
           <p className="milestone-name">Faithful Clients</p>
         </div>
         <div>
-          <h4 className="count" data-target="1000">
+          <h4 className="count" data-target="10000">
             0
           </h4>
           <p className="milestone-name">Advisories & Consultations</p>
         </div>
         <div>
-          <h4 className="count" data-target="1000">
+          <h4 className="count" data-target="6000">
             0
           </h4>
           <p className="milestone-name">Legal Documentations</p>
         </div>
         <div>
-          <h4 className="count" data-target="1000">
+          <h4 className="count" data-target="2000">
             0
           </h4>
           <p className="milestone-name">Court Hearings</p>

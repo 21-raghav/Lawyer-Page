@@ -25,7 +25,7 @@ const Navbar = () => {
     return () => {
       document.removeEventListener("mousedown", handleClickOutside);
     };
-  }, []);
+  }, );
 
   return (
     <nav ref={menuRef} className="navbar_wrapper">

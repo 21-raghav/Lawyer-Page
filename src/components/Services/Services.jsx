@@ -1,10 +1,6 @@
 import { useEffect, useRef } from "react";
-
 import { Link } from "react-router-dom";
-
-import smoothscroll from 'smoothscroll-polyfill'; 
-
-
+import { animateScroll as scroll } from "react-scroll";
 
 import { servicesData } from "../../data/servicesData.js";
 
@@ -13,32 +9,71 @@ import "./Services.css";
 const Catalog = () => {
   const scrollRef = useRef(null);
   const serviceCardRef = useRef([]);
+  const intervalRef = useRef();
+
+  const autoScroll = () => {
+    intervalRef.current = setInterval(() => {
+      const elem = scrollRef.current;
+      if (elem && serviceCardRef.current[0]) {
+        elem.scrollLeft + elem.clientWidth >= elem.scrollWidth
+          ? scroll.scrollTo(0, {
+              container: scrollRef.current,
+              smooth: true,
+              horizontal: true,
+            })
+          : scroll.scrollMore(serviceCardRef.current[0].offsetWidth + 8, {
+              container: scrollRef.current,
+              smooth: true,
+              horizontal: true,
+            });
+      }
+    }, 2500);
+  };
 
   const handleLeftArrowClick = () => {
-    scrollRef.current.scrollLeft -= serviceCardRef.current[0].offsetWidth + 8;
+    clearInterval(intervalRef.current);
+    scroll.scrollMore(-serviceCardRef.current[0].offsetWidth + 8, {
+      container: scrollRef.current,
+      smooth: true,
+      horizontal: true,
+    });
+    autoScroll();
   };
 
   const handleRightArrowClick = () => {
-    scrollRef.current.scrollLeft += serviceCardRef.current[0].offsetWidth + 8;
+    clearInterval(intervalRef.current);
+    scroll.scrollMore(serviceCardRef.current[0].offsetWidth + 8, {
+      container: scrollRef.current,
+      smooth: true,
+      horizontal: true,
+    });
+    autoScroll();
   };
 
-
   useEffect(() => {
-    smoothscroll.polyfill();
-    const interval = setInterval(() => {
-      const elem = scrollRef.current;
-      if (elem && serviceCardRef.current[0]) {
-        if (elem && serviceCardRef.current[0]) {
-          elem.scrollLeft =
-            elem.scrollLeft + elem.clientWidth >= elem.scrollWidth
-              ? 0
-              : elem.scrollLeft + serviceCardRef.current[0].offsetWidth + 8;
-        }
-      }
-     
-    }, 3000);
-    return () => clearInterval(interval);
+    autoScroll();
+    return () => clearInterval(intervalRef.current);
   }, []);
+
+  // const handleLeftArrowClick = () => {
+  //   scrollRef.current.scrollLeft -= serviceCardRef.current[0].offsetWidth + 8;
+  // };
+
+  // const handleRightArrowClick = () => {
+  //   scrollRef.current.scrollLeft += serviceCardRef.current[0].offsetWidth + 8;
+  // };
+
+  // useEffect(() => {
+  //   const interval = setInterval( {
+  //     if (elem && serviceCardRef.current[0]) {
+  //       elem.scrollLeft =
+  //       elem.scrollLeft + elem.clientWidth >= elem.scrollWidth
+  //         ? 0
+  //         : elem.scrollLeft + serviceCardRef.current[0].offsetWidth + 8;
+  //     }
+  //   }, 2500);
+  //   return () => clearInterval(interval);
+  // }, []);
 
   return (
     <section>
@@ -55,6 +90,9 @@ const Catalog = () => {
                 className="service-card"
               >
                 <h4 className="service-card-heading">{service.title}</h4>
+                <div className="service-card-icon">
+                  <img src={service.icon} alt="" />
+                </div>
                 <p>{service.description}</p>
                 <Link to={`services/${service.title}`}>Read More</Link>
               </div>

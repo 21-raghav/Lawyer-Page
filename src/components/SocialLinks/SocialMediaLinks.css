@@ -20,7 +20,7 @@
 .running-text {
   display: inline-block;
   width: max-content;
-  padding-left: 100%;
+  /* padding-left: 100%; */
   color: white;
   animation: runText 5s linear infinite ;
 }

@@ -20,15 +20,9 @@ const BannerBooking = () => {
         <ul>
           <li className="Banner_Booking_Listitem">
             <span className="Banner_Booking_Listitem_Span--align">
-              Monday – Friday
+              Monday – Saturday
             </span>{" "}
-            <span>10.00 am - 07.00 pm</span>
-          </li>
-          <li className="Banner_Booking_Listitem">
-            <span className="Banner_Booking_Listitem_Span--align">
-              Saturday & Sunday{" "}
-            </span>
-            <span>Closed</span>
+            <span>10am - 07pm</span>
           </li>
         </ul>
       </div>

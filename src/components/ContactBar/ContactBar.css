@@ -1,22 +1,26 @@
 .contactbar {
-  display: none;
   color: var(--color-light-grey);
   background-color: var(--color-navy);
 }
-@media (min-width: 768px) {
+/* @media (min-width: 768px) {
   .contactbar {
     display: block;
   }
-}
+} */
 
 .contactbar_wrapper {
   display: flex;
   flex-direction: row;
   align-items: center;
   justify-content: space-between;
-  max-width: var(--width-tablet);
-  padding: 24px 16px;
+  max-width: var(--width-mobile);
+  padding: 8px 16px;
   margin: 0 auto;
+}
+@media (min-width: 768px) {
+  .contactbar_wrapper {
+    max-width: var(--width-tablet);
+  }
 }
 @media (min-width: 991px) {
   .contactbar_wrapper {
@@ -26,9 +30,12 @@
 
 .contactbar_wrapper img {
   display: inline-block;
-  width: 32px;
+  width: 24px;
 }
 
+/* .contact_list {
+  display: none;
+} */
 .contact_list {
   display: flex;
   gap: 16px;
@@ -48,6 +55,12 @@
 .link img {
   margin-right: 6px;
 }
+
+.text {
+  display: none;
+}
+@media (min-width: 768px) {
 .text {
   display: inline-block;
+}
 }

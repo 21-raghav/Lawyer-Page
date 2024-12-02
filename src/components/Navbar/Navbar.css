@@ -25,7 +25,7 @@
 .navbar__menu {
   list-style: none;
   position: absolute;
-  top: 100%;
+  top: 110%;
   right: -100%;
   display: none;
   flex-direction: column;
@@ -53,7 +53,7 @@
 }
 
 .navbar__menu--state-active {
-  right: 0;
+  right: 2.5%;
   display: flex;
 }
 

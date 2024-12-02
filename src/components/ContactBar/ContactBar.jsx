@@ -3,7 +3,7 @@ import "./ContactBar.css";
 
 const ContactBar = () => {
   return (
-    <section className="contactbar">
+    <div className="contactbar">
         <div className="contactbar_wrapper">
             <ul className="contact_list">
                 <li><a className="link" href="tel:+91-9818920431"><img src="./icon_phone.svg" alt="phone"/><span className="text">+91 98189 20431</span></a></li>
@@ -12,7 +12,7 @@ const ContactBar = () => {
             </ul>
             <SocialLinks />
         </div>
-    </section>
+    </div>
   );
 };
 
