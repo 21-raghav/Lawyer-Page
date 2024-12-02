@@ -36,6 +36,7 @@
 @media (min-width: 768px) {
   .milestone-showcase-box {
     grid-template-columns: 1fr 1fr;
+    gap: 48px;
   }
 }
 @media (min-width: 991px) {
