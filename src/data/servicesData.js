@@ -4,7 +4,7 @@ export const servicesData = [
     title: "Divorce Petition",
     description:
       "Drafting a divorce petition is the initial step, and these petitions are essential for facilitating settlements and agreements.",
-    icon: "../../public/services_icon/divorce-petition.png",
+    icon: "../../services_icon/divorce-petition.png",
       detailInfo: {
       introPara:
         "A divorce petition is the formal legal document filed by one spouse (the petitioner) to initiate the process of dissolving a marriage. The petition outlines the grounds for divorce and the relief sought by the petitioner, such as alimony, child custody, and division of property.",
@@ -22,7 +22,7 @@ export const servicesData = [
     title: "Mutual Consent Divorce",
     description:
       "Concerned to mutual agreement and cooperation between both parties to dissolve the marriage.",
-      icon: "../../public/services_icon/divorce-mutual.png",
+      icon: "../../services_icon/divorce-mutual.png",
     detailInfo: {
       introPara:
         "Mutual consent divorce is a process where both spouses agree to dissolve their marriage amicably. This type of divorce is generally quicker, less expensive, and less emotionally taxing compared to a contested divorce.",
@@ -47,7 +47,7 @@ export const servicesData = [
     title: "Maintenance",
     description:
       "The demand for maintenance is typically made by partners who lack the assets and resources to support themselves.",
-      icon: "../../public/services_icon/divorce-maintenance.png",
+      icon: "../../services_icon/divorce-maintenance.png",
       detailInfo: {
       introPara:
         "Maintenance refers to the financial support that one individual is legally obligated to provide to another. This is often seen in family law, where maintenance is provided to a spouse, child, or other dependents.",
@@ -72,7 +72,7 @@ export const servicesData = [
     title: "Domestic Violence",
     description:
       "Assist victims in overcoming their suffering, ensuring that perpetrators are held accountable and justice is served.",
-      icon: "../../public/services_icon/domestic-voilence.png",
+      icon: "../../services_icon/domestic-voilence.png",
       detailInfo: {
       introPara:
         "Domestic violence, also known as domestic abuse or intimate partner violence, is a pervasive issue that affects individuals across the globe. It involves a pattern of abusive behavior in any relationship that is used by one partner to gain or maintain control over another partner. This abuse can be physical, emotional, sexual, economic, or psychological.",
@@ -88,7 +88,7 @@ export const servicesData = [
     title: "Criminal Litigation",
     description:
       "It involves the process of prosecuting or defending someone accused of a crime.",
-      icon: "../../public/services_icon/criminal-litigation.png",
+      icon: "../../services_icon/criminal-litigation.png",
       detailInfo: {
       introPara:
         "Criminal litigation involves the process of prosecuting or defending someone accused of a crime. It encompasses various stages, including investigation, charging, trial, and sentencing.",
@@ -114,7 +114,7 @@ export const servicesData = [
     title: "Cheque Bounce Cases",
     description:
       "Cheque bounce occurs when a bank refuses to process a cheque due to reasons like insufficient funds, closed accounts, or signature mismatches.",
-      icon: "../../public/services_icon/cheque-bounce.png",
+      icon: "../../services_icon/cheque-bounce.png",
       detailInfo: {
       introPara:
         "Cheque bounce cases, also known as dishonour of cheques, occur when a bank refuses to process a cheque due to reasons like insufficient funds, closed accounts, or signature mismatches. In India, these cases are governed by Section 138 of the Negotiable Instruments Act, 1881, which treats cheque bounce as a criminal offence.",
