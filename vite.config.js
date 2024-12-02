@@ -15,11 +15,11 @@ import { defineConfig } from 'vite';
 import react from '@vitejs/plugin-react';
 
 export default defineConfig({
-  
+  plugins: [react()],
   server: {
     proxy: {
       '/api': {
-        target: 'https://21-raghav.github.io/Lawyer-Page/',
+        target: 'https://21-raghav.github.io',
         changeOrigin: true,
         rewrite: (path) => path.replace(/^\/api/, ''),
         configure: (proxy) => {
@@ -30,6 +30,4 @@ export default defineConfig({
       },
     },
   },
-  plugins: [react()],
-  base: "https://21-raghav.github.io/Lawyer-Page/",
 });
