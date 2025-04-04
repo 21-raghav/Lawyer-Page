@@ -11,49 +11,49 @@ const Catalog = () => {
   const serviceCardRef = useRef([]);
   const intervalRef = useRef();
 
-  const autoScroll = () => {
-    intervalRef.current = setInterval(() => {
-      const elem = scrollRef.current;
-      if (elem && serviceCardRef.current[0]) {
-        elem.scrollLeft + elem.clientWidth >= elem.scrollWidth
-          ? scroll.scrollTo(0, {
-              container: scrollRef.current,
-              smooth: true,
-              horizontal: true,
-            })
-          : scroll.scrollMore(serviceCardRef.current[0].offsetWidth + 8, {
-              container: scrollRef.current,
-              smooth: true,
-              horizontal: true,
-            });
-      }
-    }, 2500);
-  };
+  // const autoScroll = () => {
+  //   intervalRef.current = setInterval(() => {
+  //     const elem = scrollRef.current;
+  //     if (elem && serviceCardRef.current[0]) {
+  //       elem.scrollLeft + elem.clientWidth >= elem.scrollWidth
+  //         ? scroll.scrollTo(0, {
+  //             container: scrollRef.current,
+  //             smooth: true,
+  //             horizontal: true,
+  //           })
+  //         : scroll.scrollMore(serviceCardRef.current[0].offsetWidth + 8, {
+  //             container: scrollRef.current,
+  //             smooth: true,
+  //             horizontal: true,
+  //           });
+  //     }
+  //   }, 2500);
+  // };
 
-  const handleLeftArrowClick = () => {
-    clearInterval(intervalRef.current);
-    scroll.scrollMore(-serviceCardRef.current[0].offsetWidth + 8, {
-      container: scrollRef.current,
-      smooth: true,
-      horizontal: true,
-    });
-    autoScroll();
-  };
+  // const handleLeftArrowClick = () => {
+  //   clearInterval(intervalRef.current);
+  //   scroll.scrollMore(-serviceCardRef.current[0].offsetWidth + 8, {
+  //     container: scrollRef.current,
+  //     smooth: true,
+  //     horizontal: true,
+  //   });
+  //   autoScroll();
+  // };
 
-  const handleRightArrowClick = () => {
-    clearInterval(intervalRef.current);
-    scroll.scrollMore(serviceCardRef.current[0].offsetWidth + 8, {
-      container: scrollRef.current,
-      smooth: true,
-      horizontal: true,
-    });
-    autoScroll();
-  };
+  // const handleRightArrowClick = () => {
+  //   clearInterval(intervalRef.current);
+  //   scroll.scrollMore(serviceCardRef.current[0].offsetWidth + 8, {
+  //     container: scrollRef.current,
+  //     smooth: true,
+  //     horizontal: true,
+  //   });
+  //   autoScroll();
+  // };
 
-  useEffect(() => {
-    autoScroll();
-    return () => clearInterval(intervalRef.current);
-  }, []);
+  // useEffect(() => {
+  //   autoScroll();
+  //   return () => clearInterval(intervalRef.current);
+  // }, []);
 
   // const handleLeftArrowClick = () => {
   //   scrollRef.current.scrollLeft -= serviceCardRef.current[0].offsetWidth + 8;
@@ -98,7 +98,7 @@ const Catalog = () => {
               </div>
             ))}
           </div>
-          <button className="services-arrow-btn" onClick={handleLeftArrowClick}>
+          {/* <button className="services-arrow-btn" onClick={handleLeftArrowClick}>
             {"<"}
           </button>
           <button
@@ -106,7 +106,7 @@ const Catalog = () => {
             onClick={handleRightArrowClick}
           >
             {">"}
-          </button>
+          </button> */}
         </div>
       </div>
     </section>
