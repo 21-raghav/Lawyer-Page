@@ -26,17 +26,24 @@
 }
 
 .services-card-list {
-  display: flex;
-  gap: 8px;
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 12px;
+  justify-items: center;
   overflow-x: hidden;
   scroll-behavior: auto;
 }
+@media (min-width: 991px) {
+  .services-card-list {
+    grid-template-columns: 1fr 1fr;
+  }
+}
 
 .service-card {
-  flex: 0 0 310px;
   display: flex;
   flex-direction: column;
   align-items: center;
+  max-width: 460px;
   min-height: 250px;
   background-color: var(--color-light-grey);
   padding: 16px;
